@@ -19,7 +19,7 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="prints-link">
                 <!-- Passes category parameter to products to filter categories  -->
-                <a href="{% url 'products' %}" class="dropdown-item">All Photography</a>
+                <a href="{% url 'products' %}?category=street_photography,landscape_photography,film_photography" class="dropdown-item">All Photography</a>
                 <a href="{% url 'products' %}?category=street_photography" class="dropdown-item">Street Photography</a>
                 <a href="{% url 'products' %}?category=landscape_photography" class="dropdown-item" >Landscape Photography</a>
                 <a href="{% url 'products' %}?category=film_photography" class="dropdown-item">Film Photography</a>
