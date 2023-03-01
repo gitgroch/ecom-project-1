@@ -12,6 +12,7 @@ def all_products(request):
     query = None
     categories = None
 
+    # check if there is a request
     if request.GET:
         # Check for category query in request
         if 'category' in request.GET:
@@ -22,13 +23,15 @@ def all_products(request):
             # filter categories
             categories = Category.objects.filter(name__in=categories)
 
-
+        # check if text inport (q) is in request.GET
         if 'q' in request.GET:
+            # Set to variable query
             query = request.GET['q']
+            # response if query blank, redirect to products
             if not query:
                 messages.error(request, "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
-            
+            # defining queries variable
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
