@@ -49,6 +49,7 @@ def checkout(request):
             'street_address1': request.POST['street_address1'],
             'street_address2': request.POST['street_address2'],
             'county': request.POST['county'],
+            'add_note': request.POST['note'],
         }
 
         order_form = OrderForm(form_data)
@@ -120,6 +121,7 @@ def checkout(request):
                     'street_address1': profile.default_street_address1,
                     'street_address2': profile.default_street_address2,
                     'county': profile.default_county,
+                    'add_note': profile.default_note,
                 })
             except UserProfile.DoesNotExist:
                 order_form = OrderForm()
