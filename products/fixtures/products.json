@@ -8,6 +8,7 @@
         "description": "lorem epsom",
         "price": 53.99,
         "category": 2,
+        "size": "A1",
         "rating": 4.6,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592493/productimg-01_vksyyo.jpg",
         "image": "productimg-01.jpg"
@@ -22,6 +23,7 @@
         "description": "lorem epsom",
         "price": 58.99,
         "category": 2,
+        "size": "A1",
         "rating": 4.6,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592493/productimg-02_cn6ccm.jpg",
         "image": "productimg-02.jpg"
@@ -36,6 +38,7 @@
         "description": "lorem epsom",
         "price": 53.99,
         "category": 2,
+        "size": "A1",
         "rating": 4.7,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592492/productimg-03_khqaoz.jpg",
         "image": "productimg-03.jpg"
@@ -50,6 +53,7 @@
         "description": "lorem epsom",
         "price": 169.99,
         "category": 2,
+        "size": "A1",
         "rating": 3,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592493/productimg-04_yor7oo.jpg",
         "image": "productimg-04.jpg"
@@ -64,6 +68,7 @@
         "description": "lorem epsom",
         "price": 232.99,
         "category": 2,
+        "size": "A1",
         "rating": 5,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592492/productimg-05_dy9azh.jpg",
         "image": "productimg-05.jpg"
@@ -78,6 +83,7 @@
         "description": "lorem epsom",
         "price": 30.99,
         "category": 2,
+        "size": "A1",
         "rating": 4.7,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592493/productimg-06_j0aecb.jpg",
         "image": "productimg-06.jpg"
@@ -92,6 +98,7 @@
         "description": "lorem epsom",
         "price": 59,
         "category": 2,
+        "size": "A1",
         "rating": 4.4,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592493/productimg-07_exwdrg.jpg",
         "image": "productimg-07.jpg"
@@ -106,6 +113,7 @@
         "description": "lorem epsom",
         "price": 36.99,
         "category": 2,
+        "size": "A1",
         "rating": 4.5,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592496/productimg-08_undiwa.jpg",
         "image": "productimg-08.jpg"
@@ -120,6 +128,7 @@
         "description": "lorem epsom",
         "price": 169.99,
         "category": 2,
+        "size": "A1",
         "rating": 4.7,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592493/productimg-09_voamtg.jpg",
         "image": "productimg-09.jpg"
@@ -134,6 +143,7 @@
         "description": "lorem epsom",
         "price": 33.99,
         "category": 2,
+        "size": "A1",
         "rating": 4.4,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592494/productimg-10_y79wf2.jpg",
         "image": "productimg-10.jpg"
@@ -148,6 +158,7 @@
         "description": "lorem epsom",
         "price": 29.99,
         "category": 2,
+        "size": "A1",
         "rating": 3,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592494/productimg-11_u7v5mo.jpg",
         "image": "productimg-11.jpg"
@@ -162,6 +173,7 @@
         "description": "lorem epsom",
         "price": 19.99,
         "category": 3,
+        "size": "A1",
         "rating": 4.6,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592494/productimg-12_b2cw3j.jpg",
         "image": "productimg-12.jpg"
@@ -176,6 +188,7 @@
         "description": "lorem epsom",
         "price": 20,
         "category": 3,
+        "size": "A2",
         "rating": 3.2,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592494/productimg-13_xa9n6j.jpg",
         "image": "productimg-13.jpg"
@@ -190,6 +203,7 @@
         "description": "lorem epsom ",
         "price": 26.99,
         "category": 3,
+        "size": "A2",
         "rating": 4.7,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592494/productimg-14_rfs8ij.jpg",
         "image": "productimg-14.jpg"
@@ -204,6 +218,7 @@
         "description": "lorem epsom",
         "price": 48.99,
         "category": 3,
+        "size": "A2",
         "rating": 4.8,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592495/productimg-15_zf0f1v.jpg",
         "image": "productimg-15.jpg"
@@ -218,6 +233,7 @@
         "description": "lorem epsom ",
         "price": 65.99,
         "category": 1,
+        "size": "A2",
         "rating": 4.4,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592495/productimg-16_rsa4h1.jpg",
         "image": "productimg-16.jpg"
@@ -232,6 +248,7 @@
         "description": "lorem epsom ",
         "price": 33.99,
         "category": 1,
+        "size": "A2",
         "rating": 4.4,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592495/productimg-17_fzvang.jpg",
         "image": "productimg-17.jpg"
@@ -246,6 +263,7 @@
         "description": "lorem epsom",
         "price": 59.99,
         "category": 1,
+        "size": "A2",
         "rating": 4.8,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592494/productimg-18_lifkp2.jpg",
         "image": "productimg-18.jpg"
@@ -260,6 +278,7 @@
         "description": "lorem epsom",
         "price": 60.99,
         "category": 1,
+        "size": "A2",
         "rating": 5,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592495/productimg-19_wgkrkj.jpg",
         "image": "productimg-19.jpg"
@@ -274,6 +293,7 @@
         "description": "lorem epsom",
         "price": 20.99,
         "category": 1,
+        "size": "A2",
         "rating": 4.7,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592495/productimg-20_tztjs7.jpg",
         "image": "productimg-20.jpg"
@@ -288,6 +308,7 @@
         "description": "lorem epsom",
         "price": 60.99,
         "category": 2,
+        "size": "A2",
         "rating": 4.3,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592495/productimg-21_mlgxwx.jpg",
         "image": "productimg-21.jpg"
@@ -302,6 +323,7 @@
         "description": "lorem epsom",
         "price": 76.99,
         "category": 1,
+        "size": "A2",
         "rating": 5,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592496/productimg-22_ocgisy.jpg",
         "image": "productimg-22.jpg"
@@ -316,6 +338,7 @@
         "description": "lorem epsom",
         "price": 29.99,
         "category": 1,
+        "size": "A3",
         "rating": 4.8,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592495/productimg-23_gbosyo.jpg",
         "image": "productimg-23.jpg"
@@ -330,6 +353,7 @@
         "description": "lorem epsom",
         "price": 82,
         "category": 1,
+        "size": "A3",
         "rating": 3.8,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592496/productimg-24_n6bgo2.jpg",
         "image": "productimg-24.jpg"
@@ -343,6 +367,7 @@
         "name": "In Darkness, In Light",
         "description": "lorem epsom",
         "price": 106.99,
+        "size": "A3",
         "category": 1,
         "rating": 3,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592496/productimg-24_n6bgo2.jpg",
@@ -357,6 +382,7 @@
         "name": "Red",
         "description": "lorem epsom",
         "price": 241.99,
+        "size": "A3",
         "category": 1,
         "rating": 4.4,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592497/productimg-26_nsmx0x.jpg",
@@ -371,6 +397,7 @@
         "name": "In Darkness, In Light 2",
         "description": "lorem epsom",
         "price": 338.99,
+        "size": "A3",
         "category": 1,
         "rating": 5,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592497/productimg-27_awbwi1.jpg",
@@ -385,6 +412,7 @@
         "name": "London Bridge",
         "description": "lorem epsom",
         "price": 53.99,
+        "size": "A3",
         "category": 1,
         "rating": 4.3,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592496/productimg-28_gwabxl.jpg",
@@ -399,6 +427,7 @@
         "name": "Cine Night",
         "description": "lorem epsom",
         "price": 31.99,
+        "size": "A3",
         "category": 1,
         "rating": 4.6,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592496/productimg-29_xdgwtq.jpg",
@@ -414,6 +443,7 @@
         "description": "lorem epsom",
         "price": 72.99,
         "category": 1,
+        "size": "A3",
         "rating": 5,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592497/productimg-30_g1gjd5.jpg",
         "image": "productimg-30.jpg"
@@ -428,6 +458,7 @@
         "description": "lorem epsom",
         "price": 69.99,
         "category": 1,
+        "size": "A3",
         "rating": 4,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592497/productimg-31_nez6hf.jpg",
         "image": "productimg-31.jpg"
@@ -441,6 +472,7 @@
         "name": "Waiting In the Dark",
         "description": "lorem epsom",
         "price": 35.99,
+        "size": "A3",
         "category": 1,
         "rating": 4.8,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592497/productimg-32_mfiexr.jpg",
@@ -455,6 +487,7 @@
         "name": "Forgotten",
         "description": "lorem epsom",
         "price": 58.99,
+        "size": "A3",
         "category": 2,
         "rating": 4.5,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592497/productimg-33_auetbz.jpg",
@@ -469,6 +502,7 @@
         "name": "California Clouds",
         "description": "lorem epsom",
         "price": 93.99,
+        "size": "A3",
         "category": 1,
         "rating": 4.5,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592497/productimg-34_vnlxhw.jpg",
@@ -484,6 +518,7 @@
         "description": "lorem epsom",
         "price": 50.99,
         "category": 2,
+        "size": "10 x 12",
         "rating": 4.7,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592497/productimg-35_k68ev1.jpg",
         "image": "productimg-35.jpg"
@@ -498,6 +533,7 @@
         "description": "lorem epsom",
         "price": 23.99,
         "category": 1,
+        "size": "10 x 12",
         "rating": 4.6,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592498/productimg-36_dtt5z9.jpg",
         "image": "productimg-36.jpg"
@@ -526,6 +562,7 @@
         "description": " lorem epsom",
         "price": 60.99,
         "category": 2,
+        "size": "10 x 12",
         "rating": 4.5,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592498/productimg-38_lerk4w.jpg",
         "image": "productimg-38.jpg"
@@ -568,6 +605,7 @@
         "description": "lorem epsom ",
         "price": 41.99,
         "category": 1,
+        "size": "10 x 12",
         "rating": 3,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592499/productimg-41_yr1xbd.jpg",
         "image": "productimg-41.jpg"
@@ -596,6 +634,7 @@
         "description": "lorem epsom",
         "price": 65.99,
         "category": 2,
+        "size": "10 x 12",
         "rating": 4,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592499/productimg-43_nxrgsm.jpg",
         "image": "productimg-43.jpg"
@@ -624,6 +663,7 @@
         "description": "lorem epsom",
         "price": 41,
         "category": 2,
+        "size": "10 x 12",
         "rating": 4.6,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592499/productimg-45_uufdqu.jpg",
         "image": "productimg-45.jpg"
@@ -637,6 +677,7 @@
         "name": "Factory",
         "description": "lorem epsom",
         "price": 162.99,
+        "size": "10 x 12",
         "category": 2,
         "rating": 4.5,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592500/productimg-46_airglt.jpg",
@@ -651,6 +692,7 @@
         "name": "Arch",
         "description": "lorem epsom",
         "price": 48.99,
+        "size": "10 x 12",
         "category": 2,
         "rating": 5,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592499/productimg-47_vveiug.jpg",
@@ -665,6 +707,7 @@
         "name": "Cliffs of Tramore",
         "description": "lorem epsom",
         "price": 34.99,
+        "size": "10 x 12",
         "category": 2,
         "rating": 3,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592500/productimg-48_hg2fuz.jpg",
@@ -694,6 +737,7 @@
         "description": "lorem epsom",
         "price": 66.99,
         "category": 2,
+        "size": "10 x 12",
         "rating": 4.6,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592500/productimg-50_d412el.jpg",
         "image": "productimg-50.jpg"
@@ -708,6 +752,7 @@
         "description": "lorem epsom",
         "price": 19.99,
         "category": 2,
+        "size": "10 x 12",
         "rating": 3.8,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592500/productimg-51_rbysc8.jpg",
         "image": "productimg-51.jpg"
@@ -722,6 +767,7 @@
         "description": "lorem epsom",
         "price": 88.99,
         "category": 2,
+        "size": "10 x 12",
         "rating": 5,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592500/productimg-52_f5tw6l.jpg",
         "image": "productimg-52.jpg"
@@ -736,6 +782,7 @@
         "description": "lorem epsom",
         "price": 53.99,
         "category": 3,
+        "size": "10 x 12",
         "rating": 3.7,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592501/productimg-53_ijksqx.jpg",
         "image": "productimg-53.jpg"
@@ -764,6 +811,7 @@
         "description": "lorem epsom",
         "price": 28.99,
         "category": 2,
+        "size": "10 x 12",
         "rating": 4.5,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592501/productimg-55_wwpiea.jpg",
         "image": "productimg-55.jpg"
@@ -778,6 +826,7 @@
         "description": "lorem epsom",
         "price": 65.99,
         "category": 2,
+        "size": "10 x 12",
         "rating": 3.9,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592501/productimg-56_uajxam.jpg",
         "image": "productimg-56.jpg"
@@ -792,6 +841,7 @@
         "description": "lorem epsom",
         "price": 66,
         "category": 1,
+        "size": "10 x 12",
         "rating": 4.7,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592502/productimg-57_ssfh9n.jpg",
         "image": "productimg-57.jpg"
@@ -806,6 +856,7 @@
         "description": "lorem epsom.",
         "price": 265,
         "category": 2,
+        "size": "10 x 12",
         "rating": 3.3,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592501/productimg-58_qfhjba.jpg",
         "image": "productimg-58.jpg"
@@ -819,6 +870,7 @@
         "name": "White Out",
         "description": "lorem epsom",
         "price": 211.99,
+        "size": "10 x 12",
         "category": 2,
         "rating": 4,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592501/productimg-59_ib2ghw.jpg",
@@ -833,6 +885,7 @@
         "name": "City Lights",
         "description": "lorem epsom",
         "price": 65.99,
+        "size": "10 x 12",
         "category": 2,
         "rating": 4.4,
         "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592502/productimg-60_wwqbw3.jpg",
@@ -847,6 +900,7 @@
           "name": "In the Shadow",
           "description": "lorem epsom",
           "price": 65.99,
+          "size": "10 x 12",
           "category": 1,
           "rating": 4.4,
           "image_url": "https://res.cloudinary.com/dygguhgfd/image/upload/v1677592493/productimg-61_diudry.jpg",

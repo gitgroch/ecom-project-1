@@ -17,7 +17,10 @@ def add_to_bag(request, item_id):
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
+    paper = request.POST.get('product_paper')
+    frame = request.POST.get('product_frame')
     size = None
+
     if 'product_size' in request.POST:
         size = request.POST['product_size']
     bag = request.session.get('bag', {})
@@ -52,6 +55,8 @@ def adjust_bag(request, item_id):
     size = None
     if 'product_size' in request.POST:
         size = request.POST['product_size']
+        paper = request.POST.get('product_paper')
+        frame = request.POST.get('product_frame')
     bag = request.session.get('bag', {})
 
     if size:
