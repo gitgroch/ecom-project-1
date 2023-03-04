@@ -53,17 +53,42 @@
                         {% csrf_token %}
                         <div class="form-row">
                             {% with product.has_sizes as s %}
+                            {% with product.has_paper as p %}
+                            {% with product.has_frame as f %}
                             {% if s %}
                                 <div class="col-12">
                                     <p><strong>Size:</strong></p>
                                     <select class="form-control rounded-0 w-50" name="product_size" id='id_product_size'>
-                                        <option value="6 x 4" selected >6" x 4"</option>
-                                        <option value="5 x 7">5" x 7"</option>
-                                        <option value="10 x 8" >10" x 8"</option>
+                                        <option value="64" selected >6" x 4"</option>
+                                        <option value="57">5" x 7"</option>
+                                        <option value="108" >10" x 8"</option>
                                         <option value="A3">A3 Poster</option>
                                         <option value="A2">A2 Poster</option>
                                     </select>
                                 </div>
+                            {% endif %}
+                            {% if p %}
+                            <div class="col-12">
+                                <p><strong>Paper:</strong></p>
+                                <select class="form-control rounded-0 w-50" name="product_size" id='id_product_size'>
+                                    <option value="gl" selected >Glossy</option>
+                                    <option value="mt">Matte</option>
+                                    <option value="gc" >Fine Art Giclee</option>
+                                    <option value="hp">Recycled Hemp</option>
+                                </select>
+                            </div>
+                            {% endif %}
+                            {% if f %}
+                            <div class="col-12">
+                                <p><strong>Frame Options:</strong></p>
+                                <select class="form-control rounded-0 w-50" name="product_size" id='id_product_size'>
+                                    <option value="no" selected >None</option>
+                                    <option value="pn">Pine</option>
+                                    <option value="bl" >Black</option>
+                                    <option value="w">White</option>
+                                    <option value="cw">Cherry Wood</option>
+                                </select>
+                            </div>
                             {% endif %}
                             <div class="col-12">
                                 <p class="mt-3"><strong>Quantity:</strong></p>
@@ -93,7 +118,7 @@
                                 </div>
                             </div>
 
-                            <div class="col{% if s %}-12 mt-2{% endif %}">
+                            <div class="col{% if s %}-12 mt-2{% endif %} col{% if p %}-12 mt-2{% endif %} col{% if f %}-12 mt-2{% endif %}">
                                 <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
@@ -103,6 +128,8 @@
                                 <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                            {% endwith %}
+                            {% endwith %}
                             {% endwith %}
                         </div>
                     </form>
