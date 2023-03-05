@@ -105,16 +105,4 @@ The site files were tested with the official W3C validator for HTMl and official
 
 ## Accessibility 
 
-- I used the [Web accessibility evaluation (WAVE)](https://wave.webaim.org/) tool to check if there were any major issues with the Accessibility of website.
-
-# Bugs and Fix Log 
-
-There were numerous bugs discovered and fixes applied throughout development, too many to keep track of, however below I have logged some of the more complex issues I came across that took the most time find a fix for.
-
-**Bug:** County and Categry fields noe passing to DB 
-
-- **Fix:** Change model to include form choices rather from the form iteself
-
-**Bug** Images not passing to DB from form
-
-- **Fix** Add request=FILES to form views
+- I used the [Web accessibility evaluation (WAVE)](https://wave.webaim.org/) tool to check if there were any major issues with the Accessibility of website. There are a number of improvements for future iteratiosn.

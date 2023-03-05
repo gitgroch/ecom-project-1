@@ -26,10 +26,6 @@ User Stories:
 
 User stories for this project can be found on theproject board [here](https://github.com/users/gitgroch/projects/3)
 
-
-The development Goals for the Website were to:
-
-- 
 The website can be accessed here: [https://ecom-proj-1.herokuapp.com/](https://ecom-proj-1.herokuapp.com/)
 
 ## **Agile Methodology**
@@ -44,13 +40,60 @@ Using coolors.co I developed the below color scheme.
 
 ![screenshot of color scheme](/media/documents/colors.jpg)
 
+### **Marketing**
+
+The marketing plan for this e-commerce platform can be found here [here](/marketing.md)
+
 ### **Features**
+
+![screenshot of home page](/media/documents/clean.jpg)
+
+- The site features a clean minimalist design
+- The store is easily accessible from the home page
+
+![screenshot of sorting](/media/documents/sorting.jpg)
+
+- Shoppers can choose to sort their product view based on category, price, rating or view all product
+
+![screenshot of All Products](/media/documents/all_products_with_sorting.jpg)
+
+- Shoppers have a clearview of all products on the store with details including name and price
+- Shoppers can also sort their view using the drop down menu on the right of the page
+- Admin or store owners can delete products from this page or click edit on any product to edit the product via the webform
+
+![screenshot of product detail page](/media/documents/product_detail.jpg)
+
+- Shoppers can view the product price, category, rating and description from the product details page
+- Shoppers can  selec the size of the product if availble, and add any quantity to their bag
+- Admin or store owners can delete products from this page or click edit on any product to edit the product via the webform
+
+![screenshot of Shopping Bag](/media/documents/shopping_bag.jpg)
+
+- Shoppers geta brekdown of their purchases in their shopping bag
+- Shoppers can proceed to secure checkout from here
+
+![screenshot of Checkout](/media/documents/checkout.jpg)
+
+- Shoppers can fill in their shipping details along with card details to complete their purchase
+- A subtotal and summary of their order can be seen here
+
+![screenshot of Order Confirm](/media/documents/order_confirm.jpg)
+
+- Shoppers are given an order summary after the order has been submitted
+
+![screenshot of Product Management](/media/documents/product_management.jpg)
+
+- Admin or store owners can create new products or update existing products using the product management webform.
+
+![screenshot of Profile](/media/documents/profile.jpg)
+
+- Users can manage their prefill data, and see their previous orders from profile page.
 
 
 
 ## **Testing:**
 
-The website was tested 
+Testing for the project is detailed [here](/TESTING.md)
 
 ## **Future Enhancement**
 Some nice to haves fell out of the scope of this project. This is a list of features that could be included in future updates:
@@ -59,6 +102,7 @@ Some nice to haves fell out of the scope of this project. This is a list of feat
 - Add Blog for SEO purposes.
 - Add a Biography page.
 - Add section for discounted items and sales.
+- Improve accessibility for the site.
 
 
 ## **Deployment** 
