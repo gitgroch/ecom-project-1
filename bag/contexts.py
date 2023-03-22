@@ -23,13 +23,22 @@ def bag_contents(request):
         else:
             product = get_object_or_404(Product, pk=item_id)
             for size, quantity in item_data['items_by_size'].items():
-                total += quantity * product.price
+                if 'frame_type' in item_data and 'paper_type' in item_data:
+                    total += quantity * Decimal(product.price) * Decimal(item_data['frame_type']['price']) * Decimal(item_data['paper_type']['price'])
+                elif 'frame_type' in item_data:
+                    total += quantity * Decimal(product.price) * Decimal(item_data['frame_type']['price'])
+                elif 'paper_type' in item_data:
+                    total += quantity * Decimal(product.price) * Decimal(item_data['paper_type']['price'])
+                else:
+                    total += quantity * Decimal(product.price)
                 product_count += quantity
                 bag_items.append({
                     'item_id': item_id,
                     'quantity': quantity,
                     'product': product,
                     'size': size,
+                    'frame_type': item_data.get('frame_type'),
+                    'paper_type': item_data.get('paper_type')
                 })
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
