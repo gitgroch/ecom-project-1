@@ -10,6 +10,7 @@ def bag_contents(request):
     product_count = 0
     bag = request.session.get('bag', {})
 
+
     for item_id, item_data in bag.items():
         if isinstance(item_data, int):
             product = get_object_or_404(Product, pk=item_id)
@@ -23,23 +24,16 @@ def bag_contents(request):
         else:
             product = get_object_or_404(Product, pk=item_id)
             for size, quantity in item_data['items_by_size'].items():
-                if 'frame_type' in item_data and 'paper_type' in item_data:
-                    total += quantity * Decimal(product.price) * Decimal(item_data['frame_type']['price']) * Decimal(item_data['paper_type']['price'])
-                elif 'frame_type' in item_data:
-                    total += quantity * Decimal(product.price) * Decimal(item_data['frame_type']['price'])
-                elif 'paper_type' in item_data:
-                    total += quantity * Decimal(product.price) * Decimal(item_data['paper_type']['price'])
-                else:
-                    total += quantity * Decimal(product.price)
-                product_count += quantity
-                bag_items.append({
-                    'item_id': item_id,
-                    'quantity': quantity,
-                    'product': product,
-                    'size': size,
-                    'frame_type': item_data.get('frame_type'),
-                    'paper_type': item_data.get('paper_type')
-                })
+                if isinstance(quantity, int):
+                    total += quantity * product.price
+                    product_count += quantity
+                    bag_items.append({
+                        'item_id': item_id,
+                        'quantity': quantity,
+                        'product': product,
+                        'size': size,
+                    })
+                
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
