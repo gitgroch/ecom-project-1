@@ -17,6 +17,8 @@ def add_to_bag(request, item_id):
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     size = None
+    frame_type = request.POST.get('frame_type')
+    paper_type = request.POST.get('paper_type')
     if 'product_size' in request.POST:
         size = request.POST['product_size']
     bag = request.session.get('bag', {})
@@ -27,17 +29,17 @@ def add_to_bag(request, item_id):
                 bag[item_id]['items_by_size'][size] += quantity
                 messages.success(request, f'Updated size {size.upper()} {product.name} quantity to {bag[item_id]["items_by_size"][size]}')
             else:
-                bag[item_id]['items_by_size'][size] = quantity
+                 bag[item_id]['items_by_size'][size] = {'quantity': quantity, 'frame_type': frame_type, 'paper_type': paper_type}
                 messages.success(request, f'Added size {size.upper()} {product.name} to your bag')
         else:
-            bag[item_id] = {'items_by_size': {size: quantity}}
+            bag[item_id] = {'items_by_size': {size: {'quantity': quantity, 'frame_type': frame_type, 'paper_type': paper_type}}}
             messages.success(request, f'Added size {size.upper()} {product.name} to your bag')
     else:
         if item_id in list(bag.keys()):
             bag[item_id] += quantity
             messages.success(request, f'Updated {product.name} quantity to {bag[item_id]}')
         else:
-            bag[item_id] = quantity
+            bag[item_id] = {'quantity': quantity, 'frame_type': frame_type, 'paper_type': paper_type}
             messages.success(request, f'Added {product.name} to your bag')
 
     request.session['bag'] = bag
