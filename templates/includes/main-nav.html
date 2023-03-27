@@ -19,7 +19,7 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Prints
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="prints-link">
@@ -30,5 +30,11 @@
                 <a href="{% url 'products' %}?category=film_photography" class="dropdown-item">Film Photography</a>
             </div>
         </li>
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'commissions' %}" id="" aria-haspopup="true" aria-expanded="false">
+                Commissions
+            </a>
+        </li>
+        
     </ul>
 </div>
