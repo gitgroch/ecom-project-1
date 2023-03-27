@@ -1,10 +1,11 @@
 from django import forms
-from .models import Order
+from .models import Commission
+from crispy_forms.helper import FormHelper
 
 
-class OrderForm(forms.ModelForm):
+class CommissionForm(forms.ModelForm):
     class Meta:
-        model = Order
+        model = Commission
         fields = ('full_name', 'email', 'phone_number', 'location',
                   'commission_request',)
 
