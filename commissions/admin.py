@@ -2,6 +2,7 @@ from django.contrib import admin
 from .models import Commission
 from django_summernote.admin import SummernoteModelAdmin
 
+
 # Create commissions admin model 
 @admin.register(Commission)
 class CommissionAdmin(SummernoteModelAdmin):
