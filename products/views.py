@@ -2,7 +2,9 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
+from .models import Review
 from django.db.models.functions import Lower
+from .forms import ReviewForm
 
 from .models import Product, Category
 from .forms import ProductForm
@@ -135,3 +137,17 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+@login_required
+def add_review(request, product_id):
+    product = get_object_or_404(Product, pk=product_id)
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            rating = form.cleaned_data['rating']
+            comment = form.cleaned_data['comment']
+            review = Review.objects.create(user=request.user, product=product, rating=rating, comment=comment)
+            return redirect('product_details', product_id=product_id)
+    else:
+        form = ReviewForm()
+    return render(request, 'products/product_detail.html', {'form': form,})

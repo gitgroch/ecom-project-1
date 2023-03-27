@@ -16,7 +16,7 @@ class Category(models.Model):
     def get_friendly_name(self):
         return self.friendly_name
 
-
+# Product Model
 class Product(models.Model):
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)
@@ -34,9 +34,10 @@ class Product(models.Model):
     def __str__(self):
         return self.name
 
+# Review Model
 class Review(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    rating = models.IntegerField()
-    comment = models.TextField()
+    rating = models.FloatField(default=0)
+    comment = models.TextField(max_length=254, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)

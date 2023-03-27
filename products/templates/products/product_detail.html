@@ -125,11 +125,52 @@
                             <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
+
                         {% endwith %}
                         {% endwith %}
                         {% endwith %}
                     </div>
                 </form>
+            </div>
+            <div>
+                <h2>Reviews</h2>
+                {% for review in product.reviews.all %}
+                <div class="review">
+                    <h3>{{ review.user.username }}</h3>
+                    <p>Rating: {{ review.rating }}</p>
+                    <p>{{ review.comment }}</p>
+                    <p>{{ review.created_at }}</p>
+                </div>
+                {% empty %}
+                <p>No reviews yet.</p>
+                {% endfor %}
+
+                <h2>Add a review</h2>
+                <form method="post">
+                    {% csrf_token %}
+                 
+                    <div class="rating-stars">
+                        <input type="radio" id="1star" name="fav_language" value="1">
+                        <label for="1">1 <i class="fas fa-star mr-1"></i></label>
+                        <input type="radio" id="2star" name="fav_language" value="2">
+                        <label for="2">2 <i class="fas fa-star mr-1"></i></label>
+                        <input type="radio" id="3star" name="fav_language" value="3">
+                        <label for="3">3 <i class="fas fa-star mr-1"></i></label>
+                        <input type="radio" id="4star" name="fav_language" value="4">
+                        <label for="4">4 <i class="fas fa-star mr-1"></i></label>
+                        <input type="radio" id="5star" name="fav_language" value="5">
+                        <label for="5">5 <i class="fas fa-star mr-1"></i></label>
+                    </div>
+                    <button type="submit" class="btn btn-dark mt-5">Submit</button>
+                </form>
+                <script>
+                    $('.rating-stars .star').on('click', function () {
+                        var rating = $(this).data('value');
+                        $('input[name="rating"]').val(rating);
+                        $(this).addClass('selected').prevAll().addClass('selected');
+                        $(this).nextAll().removeClass('selected');
+                    });
+                </script>
             </div>
         </div>
     </div>
