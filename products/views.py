@@ -66,7 +66,7 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
 
-    # Collect ratings 
+    # Collect reviews 
     if request.method == 'POST':
         rating = request.POST.get('rating', 3)
         content = request.POST.get('content', '')
@@ -161,3 +161,30 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+# @login_required
+# def delete_review(request, id):
+#     review = Review.objects.filter(created_by=request.user, product=product)
+#     messages.success(request, 'Review deleted!')
+#     review.delete()
+#     return redirect(reverse('products'))
+
+@login_required
+def delete_review(request, product_id, review_id):
+    """ A view to delete a review """
+    review = get_object_or_404(Review, pk=review_id)
+
+    # Only allow the review's author to delete it
+    if review.created_by != request.user:
+        return HttpResponseForbidden("You don't have permission to delete this review.")
+
+    if request.method == 'POST':
+        review.delete()
+        messages.success(request, 'Your review has been deleted.')
+        return redirect('product_detail', product_id=review.product.pk)
+
+    context = {
+        'review': review,
+    }
+
+    return render(request, 'products/review_confirm_delete.html', context)

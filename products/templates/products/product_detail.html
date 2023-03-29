@@ -33,6 +33,7 @@
                 <strong>Reviewed By:</strong> {{review.created_by}}<br>
                 <strong>Comment: </strong><br>
                 {{ review.content }}
+                <a href="{% url 'delete_review' product_id=product.id review_id=review.id %}" class="text-danger">Delete</a>
             </div>
         {% endfor %}
         </div>
