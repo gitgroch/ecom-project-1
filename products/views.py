@@ -66,9 +66,22 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
 
+    if request.method == 'POST':
+        rating = request.POST.get('rating', 3)
+        content = request.POST.get('content', '')
+
+        if content:
+            review = Review.objects.create(
+                product=product, 
+                rating=rating,
+                content=content,
+                created_by=request.user,
+            )
+
+            return redirect('product_detail', product_id=product_id)
+
     context = {
         'product': product,
-        'form': ReviewForm(),
     }
 
     return render(request, 'products/product_detail.html', context)
