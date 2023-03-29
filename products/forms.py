@@ -1,6 +1,7 @@
 from django import forms
 from .widgets import CustomClearableFileInput
-from .models import Product, Category
+from .models import Product, Category, Review
+from crispy_forms.helper import FormHelper
 
 
 class ProductForm(forms.ModelForm):
@@ -21,6 +22,12 @@ class ProductForm(forms.ModelForm):
             field.widget.attrs['class'] = 'border-black rounded-0'
 
 # Form for Reviews
-class ReviewForm(forms.Form):
-    rating = forms.IntegerField(min_value=1, max_value=5)
-    comment = forms.CharField(widget=forms.Textarea)
+# class ReviewForm(forms.Form):
+#     rating = forms.IntegerField(min_value=1, max_value=5)
+#     comment = forms.CharField(widget=forms.Textarea)
+
+class ReviewForm(forms.ModelForm):
+    class Meta:
+        model = Review
+        fields = ('rating', 'comment',)
+

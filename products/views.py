@@ -68,6 +68,7 @@ def product_detail(request, product_id):
 
     context = {
         'product': product,
+        'form': ReviewForm(),
     }
 
     return render(request, 'products/product_detail.html', context)
@@ -138,16 +139,18 @@ def delete_product(request, product_id):
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
 
-@login_required
-def add_review(request, product_id):
-    product = get_object_or_404(Product, pk=product_id)
-    if request.method == 'POST':
-        form = ReviewForm(request.POST)
-        if form.is_valid():
-            rating = form.cleaned_data['rating']
-            comment = form.cleaned_data['comment']
-            review = Review.objects.create(user=request.user, product=product, rating=rating, comment=comment)
-            return redirect('product_details', product_id=product_id)
-    else:
-        form = ReviewForm()
-    return render(request, 'products/product_detail.html', {'form': form,})
+
+# Review form 
+# @login_required
+# def add_review(request, product_id):
+#     product = get_object_or_404(Product, pk=product_id)
+#     if request.method == 'POST':
+#         form = ReviewForm(request.POST)
+#         if form.is_valid():
+#             rating = form.cleaned_data['rating']
+#             comment = form.cleaned_data['comment']
+#             review = Review.objects.create(user=request.user, product=product, rating=rating, comment=comment)
+#             return redirect('product_details', product_id=product_id)
+#     else:
+#         form = ReviewForm()
+#     return render(request, 'products/product_detail.html', {'form': form,})
