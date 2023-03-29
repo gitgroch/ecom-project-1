@@ -30,6 +30,7 @@
             {% for review in product.reviews.all %}
             <div class="px-4 py-6 mb-4 mt-4">
                 <strong>Rating: </strong><i class="fas fa-star mr-1"></i>{{review.rating}}/5<br>
+                <strong>Reviewed By:</strong> {{review.created_by}}<br>
                 <strong>Comment: </strong><br>
                 {{ review.content }}
             </div>
@@ -46,8 +47,8 @@
                     </a>
                 </p>
                 {% endif %}
-                {% if product.rating %}
-                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                {% if product.get_rating > 0 %}
+                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.get_rating }} / 5</small>
                 {% else %}
                 <small class="text-muted">No Rating</small>
                 {% endif %}
@@ -141,26 +142,7 @@
                 </form>
             </div>
             <div>
-                <!-- <h2>Reviews</h2>
-                {% for review in product.reviews.all %}
-                <div class="review">
-                    <h3>{{ review.user.username }}</h3>
-                    <p>Rating: {{ review.rating }}</p>
-                    <p>{{ review.comment }}</p>
-                    <p>{{ review.created_at }}</p>
-                </div>
-                {% empty %}
-                <p>No reviews yet.</p>
-                {% endfor %}
-
-                <h2>Add a review</h2>
-                <form method="post">
-                    {% csrf_token %}
-                    {% load crispy_forms_tags %}
-                    {{ form|crispy }}
-                    <button type="submit" class="btn btn-dark mt-5">Submit</button> -->
                 <h3>Leave a Review:</h3>
-
                 {% if request.user.is_authenticated %}
                 <form method="post" action="." class="p-6">
                     {% csrf_token %}
@@ -173,7 +155,7 @@
                             <option value="3">3</option>
                             <option value="4">4</option>
                             <option value="5">5</option>
-                        </select>
+                        </select> <i class="fas fa-star mr-1"></i>
                     </div>
 
                     <div>

@@ -66,6 +66,7 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
 
+    # Collect ratings 
     if request.method == 'POST':
         rating = request.POST.get('rating', 3)
         content = request.POST.get('content', '')

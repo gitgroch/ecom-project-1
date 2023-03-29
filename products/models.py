@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 
 
 class Category(models.Model):
@@ -35,6 +37,18 @@ class Product(models.Model):
     def __str__(self):
         return self.name
 
+    def get_rating(self):
+        reviews_total = 0
+
+        for review in self.reviews.all():
+            reviews_total += review.rating
+        
+        if reviews_total > 0:
+            return reviews_total / self.reviews.count()
+
+        return "0"
+
+
 # Review Model
 class Review(models.Model):
     product = models.ForeignKey(Product, related_name='reviews', on_delete=models.CASCADE)
@@ -43,3 +57,10 @@ class Review(models.Model):
     content = models.TextField(max_length=254, default=0,)
     created_at = models.DateTimeField(auto_now_add=True)
     created_by = models.ForeignKey(User, related_name='reviews', on_delete=models.CASCADE, default=0)
+
+# Updates rating based on get_rating method
+
+@receiver(post_save, sender=Review)
+def update_product_rating(sender, instance, **kwargs):
+    instance.product.rating = instance.product.get_rating()
+    instance.product.save()
