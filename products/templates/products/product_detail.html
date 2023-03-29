@@ -32,8 +32,10 @@
                 <strong>Rating: </strong><i class="fas fa-star mr-1"></i>{{review.rating}}/5<br>
                 <strong>Reviewed By:</strong> {{review.created_by}}<br>
                 <strong>Comment: </strong><br>
-                {{ review.content }}
+                {{ review.content }}<br>
+                {% if user.is_authenticated and user.is_staff or user == review.created_by %}
                 <a href="{% url 'delete_review' product_id=product.id review_id=review.id %}" class="text-danger">Delete</a>
+                {% endif %}
             </div>
         {% endfor %}
         </div>
