@@ -26,6 +26,14 @@
                 </a>
                 {% endif %}
             </div>
+            <h2>Reviews</h2>
+            {% for review in product.reviews.all %}
+            <div class="px-4 py-6 mb-4 mt-4">
+                <strong>Rating: </strong><i class="fas fa-star mr-1"></i>{{review.rating}}/5<br>
+                <strong>Comment: </strong><br>
+                {{ review.content }}
+            </div>
+        {% endfor %}
         </div>
         <div class="col-12 col-md-6 col-lg-4">
             <div class="product-details-container mb-5 mt-md-5">
@@ -151,34 +159,35 @@
                     {% load crispy_forms_tags %}
                     {{ form|crispy }}
                     <button type="submit" class="btn btn-dark mt-5">Submit</button> -->
-                    <h2>Reviews</h2>
+                <h3>Leave a Review:</h3>
 
-                    {% if request.user.is_authenticated %}
-                        <form method="post" action="." class="p-6">
-                            {% csrf_token %}    
+                {% if request.user.is_authenticated %}
+                <form method="post" action="." class="p-6">
+                    {% csrf_token %}
 
-                            <div>
-                                <label for="">Rating</label><br>
-                                <select name="rating" id="">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </div>
+                    <div>
+                        <label for="">Rating</label><br>
+                        <select name="rating" id="">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
 
-                            <div>
-                                <label>Comment</label><br>
-                                <textarea name="content" id="" cols="30" rows="5"></textarea>
-                            </div>
-                            <div>
-                            <button type="submit" class="btn btn-dark mt-5">Submit</button>
-                            </div>
-                        </form>
-                    {% endif %}
-                
+                    <div>
+                        <label>Comment</label><br>
+                        <textarea name="content" id="" cols="30" rows="5"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-dark mt-5">Submit</button>
+                    </div>
+                </form>
+                {% endif %}
             </div>
+        </div>
+        <div>
         </div>
     </div>
 </div>
