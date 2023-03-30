@@ -28,6 +28,8 @@ User stories for this project can be found on theproject board [here](https://gi
 
 The website can be accessed here: [https://ecom-proj-1.herokuapp.com/](https://ecom-proj-1.herokuapp.com/)
 
+Resubmission notes can be accessed here: [resubmission.md](/resubmission.md)
+
 ## **Agile Methodology**
 
 - Agile methodolgy was used in the development of the project in the form of a Kanbanboard available [here](https://github.com/users/gitgroch/projects/3)

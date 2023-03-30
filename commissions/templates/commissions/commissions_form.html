@@ -24,25 +24,27 @@
     </div>
     <div class="row">
         <div class="col-12 col-lg-6 order-lg-last mb-5">
-            <div class="card" style="">
+            <div class="card image-container">
                 <div class="card-body">
                     <h5 class="card-title">Let's Work Together!</h5>
-                    <img src="https://res.cloudinary.com/dygguhgfd/image/upload/v1677592496/productimg-22_ocgisy.jpg" class="img-fluid" alt="Responsive image">
+                    <img src="https://res.cloudinary.com/dygguhgfd/image/upload/v1677592497/productimg-34_vnlxhw.jpg"
+                        class="img-fluid" alt="Responsive image">
                     <h6 class="card-subtitle mb-2 mt-3 text-muted">Commissions Are Now Available</h6>
-                    <p class="card-text">Weddings, Portraits, or pictures of your new Cat, there's no job too big or
+                    <p class="card-text">Weddings, Portraits, Landscapes or pictures of your new Cat, there's no job too
+                        big or
                         small. Flll out our form now and we'll get back to you as soon as possible!</p>
-                    <a class="btn btn-dark" href="{% url 'home' %}" role="button">Take me Home! </a>
+                    <a class="btn btn-dark" href="{% url 'home' %}" role="button">I'm good, Take me Home! </a>
                 </div>
             </div>
         </div>
-        <div class="col-12 col-lg-6 mb-5">
+        <div class="col-12 col-lg-6 mb-5 card-body">
             <div class="row">
                 <div class="col-6 col-lg-6">
                     <p class="text-muted">Please fill out the form below to tell us about your needs.</p>
                     <form method="POST" class="comm-form" id="commissions-form" enctype="multipart/form-data">
                         {% csrf_token %}
-                            {% load crispy_forms_tags %}
-                            {{ form|crispy }}
+                        {% load crispy_forms_tags %}
+                        {{ form|crispy }}
                         <div class="submit-button text-right mt-5 mb-2">
                             </a>
                             <button type="submit" id="submit-button" class="btn btn-black rounded-0">
