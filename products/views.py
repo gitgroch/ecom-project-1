@@ -162,13 +162,6 @@ def delete_product(request, product_id):
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
 
-# @login_required
-# def delete_review(request, id):
-#     review = Review.objects.filter(created_by=request.user, product=product)
-#     messages.success(request, 'Review deleted!')
-#     review.delete()
-#     return redirect(reverse('products'))
-
 @login_required
 def delete_review(request, product_id, review_id):
     """ A view to delete a review """
