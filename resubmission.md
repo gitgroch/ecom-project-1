@@ -1,8 +1,8 @@
-## Notes for Resubmission
+# Notes for Resubmission
 
 The following updates have been made to address failings under the LO1 criteria 1.9 and 1.12
 
-Custom Models: 
+Custom Models:
 
 - Product App & Model - Updated
     - The product model has  been updated to calculate and store review scores
@@ -15,4 +15,3 @@ Custom Models:
 
 - Check Out 
     - The checkout model has an additional notes section for delivery notes
-

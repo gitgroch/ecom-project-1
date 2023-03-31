@@ -9,7 +9,7 @@ class Category(models.Model):
 
     class Meta:
         verbose_name_plural = 'Categories'
-        
+
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
@@ -36,7 +36,6 @@ class Product(models.Model):
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 
-
     def __str__(self):
         return self.name
 
@@ -45,7 +44,7 @@ class Product(models.Model):
 
         for review in self.reviews.all():
             reviews_total += review.rating
-        
+
         if reviews_total > 0:
             return reviews_total / self.reviews.count()
 
@@ -61,8 +60,8 @@ class Review(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     created_by = models.ForeignKey(User, related_name='reviews', on_delete=models.CASCADE, default=0)
 
-# Updates rating based on get_rating method
 
+# Updates rating based on get_rating method
 @receiver(post_save, sender=Review)
 def update_product_rating(sender, instance, **kwargs):
     instance.product.rating = instance.product.get_rating()
