@@ -150,3 +150,4 @@ The site was deployed to Heroku and AWS for static files, and Stripe as the paym
 - This project relies heavily on the code from the Code Institute tutorial "Building an E-Commerce - Project - Boutique Ado", code has been altered and updated to suit the project needs.
 - All images are my own 
 - Footer code partially credited to MDBootstrap
+- Credit to [Code With Stein](https://www.youtube.com/watch?v=8iCqlFyFu2s) on YouTube for tutorial on adding reviews 
