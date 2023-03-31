@@ -5,7 +5,6 @@ The following updates have been made to address failings under the LO1 criteria 
 Custom Models: 
 
 - Product App & Model - Updated
-    - from models.py has_paper and has_frame is now implemented in the product details page as options
     - The product model has also been updated to calculate and store review scores
 
 - Commissions App - New
