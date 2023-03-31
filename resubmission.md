@@ -5,7 +5,7 @@ The following updates have been made to address failings under the LO1 criteria 
 Custom Models: 
 
 - Product App & Model - Updated
-    - The product model has also been updated to calculate and store review scores
+    - The product model has  been updated to calculate and store review scores
 
 - Commissions App - New
     - Commissions app has been created and has a submission form and a custom model and is included in the admin panel
