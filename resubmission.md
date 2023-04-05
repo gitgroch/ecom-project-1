@@ -5,14 +5,15 @@ The following updates have been made to address failings under the LO1 criteria 
 Custom Models:
 
 - Product App & Model - Updated
-    - The product model has  been updated to calculate and store review scores
+    - The product model has  been updated to calculate and store review scores.
     - Note that there are currently unused fields in the product model ("has_frame and has_paper"), I have left these in to use in future releases.
 
 - Commissions App - New
-    - Commissions app has been created and has a submission form and a custom model and is included in the admin panel
+    - Commissions app has been created and has a submission form and a custom model and is included in the admin panel.
 
 - Review Feature - New
-    - Functionality to create and delete reviews with a rating has been implemented with a custom model in the products/models.py
+    - Functionality to create update and delete reviews with a rating has been implemented with a custom model in the products/models.py.
+    - See credits in [README.md](/README.md) for help received on this feature.
 
 - Check Out - As before
-    - The checkout model has an additional notes section for delivery notes
+    - The checkout model has an additional notes section for delivery notes.
